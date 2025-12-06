@@ -16,24 +16,31 @@ document.addEventListener("DOMContentLoaded", function () {
     // 3. EVENTO PRINCIPAL DO FORMULÁRIO
     //------------------------------------------
     form.addEventListener("submit", function (e) {
-        e.preventDefault();
+    e.preventDefault();
 
-        const nome = document.getElementById("nome").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const msg = document.getElementById("mensagem").value.trim();
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const msg = document.getElementById("mensagem").value.trim();
 
-        if (!nome || !email || !msg) {
-            mostrarFeedback("Preencha todos os campos.", true);
-            return;
-        }
+    // Validação 1 - campos vazios
+    if (!nome || !email || !msg) {
+        mostrarFeedback("Preencha todos os campos.", true);
+        return;
+    }
 
-        if (!email.includes("@") || !email.includes(".")) {
-            mostrarFeedback("Digite um email válido.", true);
-            return;
-        }
+    // Validação 2 - remover espaços e validar email corretamente
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        mostrarFeedback("Mensagem enviada com sucesso! (Simulação)", false);
-        form.reset();
+    if (!emailValido.test(email)) {
+        mostrarFeedback("Digite um email válido.", true);
+        return;
+    }
+
+    // Sucesso
+    mostrarFeedback("Mensagem enviada com sucesso! (Simulação)", false);
+
+    // Limpar campos
+    form.reset();
     });
 
     //------------------------------------------
