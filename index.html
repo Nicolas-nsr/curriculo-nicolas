@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Currículo Online - Nicolas Seabra</title>
+
+    <!-- CSS externo (sem frameworks, regra da atividade) -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Descrição da página para SEO e acessibilidade -->
+    <meta name="description" content="Currículo online de Nicolas Seabra — QA Tester.">
+</head>
+
+<body>
+
+    <!-- MENU FIXO EM TODAS AS SEÇÕES -->
+    <!-- Comentário: o menu é fixo e visível sempre, requisito obrigatório da atividade -->
+    <header id="topo">
+        <nav class="menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#formacao">Formação</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEÇÃO 1 — SOBRE -->
+        <section id="sobre" class="secao">
+            <h1>Nicolas Seabra</h1>
+            <img src="assets/avatar.jpg" alt="Foto de Nicolas" class="foto">
+
+            <p><strong>QA Tester</strong> com experiência em testes funcionais, homologação e análise de requisitos,
+                atuando em ambientes ágeis e produtos digitais. Localizado em Cachoeirinha/RS.</p>
+        </section>
+
+        <!-- SEÇÃO 2 — EXPERIÊNCIA -->
+        <section id="experiencia" class="secao">
+            <h2>Experiência Profissional</h2>
+
+            <div class="exp-item">
+                <h3>QA Tester — PagoNxt / Santander</h3>
+                <p>Atuação na homologação final antes da produção, validação de fluxos bancários e testes funcionais.</p>
+            </div>
+
+            <div class="exp-item">
+                <h3>QA Tester — Getnet</h3>
+                <p>Execução de testes, análise de defeitos, documentação e relacionamento com times de desenvolvimento.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3 — FORMAÇÃO -->
+        <section id="formacao" class="secao">
+            <h2>Formação</h2>
+
+            <ul>
+                <li><strong>Análise e Desenvolvimento de Sistemas</strong> — UNINTER (em andamento)</li>
+                <li>Cursos complementares em Testes de Software</li>
+            </ul>
+        </section>
+
+        <!-- SEÇÃO 4 — CONTATO -->
+        <section id="contato" class="secao">
+            <h2>Contato</h2>
+            <p>Preencha o formulário para enviar uma mensagem (simulação exigida pela atividade).</p>
+
+            <!-- Comentário: O formulário não envia dados, apenas simula via JavaScript -->
+            <form id="formContato" novalidate>
+                <label>Nome</label>
+                <input type="text" id="nome" required>
+
+                <label>E-mail</label>
+                <input type="email" id="email" required>
+
+                <label>Mensagem</label>
+                <textarea id="mensagem" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+
+            <!-- Mensagem simulada pelo JS -->
+            <div id="feedback" class="feedback" hidden></div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; <span id="ano"></span> — Currículo Online de Nicolas Seabra</p>
+        <a href="#topo">Voltar ao topo</a>
+    </footer>
+
+    <!-- JS externo (sem frameworks, conforme regra) -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
