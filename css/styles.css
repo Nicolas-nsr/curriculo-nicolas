@@ -42,6 +42,12 @@ body {
 /* -------------------------------------------------------
    SEÇÕES DO SITE
 --------------------------------------------------------*/
+/* Ajusta a posição exata quando o usuário clica no menu */
+.secao {
+  scroll-margin-top: 100px; /* ajuste conforme a altura do seu menu */
+}
+
+
 .secao {
     max-width: 900px;
     margin: 6rem auto 2rem auto; /* espaço por causa do menu fixo */
