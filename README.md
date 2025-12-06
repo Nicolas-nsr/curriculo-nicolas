@@ -1,4 +1,4 @@
-# https-github.com-nicolasseabra-curriculo-nicolas.git-📄 Currículo Online – Nicolas Seabra
+📄 Currículo Online – Nicolas Seabra
 
 Projeto desenvolvido para a disciplina Ferramentas de Desenvolvimento Web (UNINTER).
 Consiste na criação de um currículo online responsivo, utilizando apenas HTML, CSS e JavaScript, conforme as regras da atividade.
